@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>パーティーテトリス</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>パーティーテトリス</h1>
+            <div class="score-container">
+                <div class="score">スコア: <span id="score">0</span></div>
+                <div class="level">レベル: <span id="level">1</span></div>
+                <div class="lines">ライン: <span id="lines">0</span></div>
+            </div>
+        </div>
+        <div class="game-area">
+            <canvas id="game-board"></canvas>
+            <div class="side-panel">
+                <div class="next-piece-container">
+                    <h3>次のピース</h3>
+                    <canvas id="next-piece"></canvas>
+                </div>
+                <div class="controls">
+                    <h3>操作方法</h3>
+                    <p>← → : 移動</p>
+                    <p>↑ : 回転</p>
+                    <p>↓ : 高速落下</p>
+                    <p>スペース : 即時落下</p>
+                    <p>P : 一時停止</p>
+                </div>
+                <button id="start-button">ゲームスタート</button>
+                <button id="reset-button">リセット</button>
+            </div>
+        </div>
+    </div>
+    <div id="game-over" class="hidden">
+        <div class="game-over-content">
+            <h2>ゲームオーバー!</h2>
+            <p>スコア: <span id="final-score">0</span></p>
+            <button id="restart-button">もう一度プレイ</button>
+        </div>
+    </div>
+    <audio id="move-sound" src="sounds/move.mp3" preload="auto"></audio>
+    <audio id="rotate-sound" src="sounds/rotate.mp3" preload="auto"></audio>
+    <audio id="drop-sound" src="sounds/drop.mp3" preload="auto"></audio>
+    <audio id="clear-sound" src="sounds/clear.mp3" preload="auto"></audio>
+    <audio id="game-over-sound" src="sounds/gameover.mp3" preload="auto"></audio>
+    <audio id="level-up-sound" src="sounds/levelup.mp3" preload="auto"></audio>
+    <audio id="bgm" src="sounds/bgm.mp3" loop preload="auto"></audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
